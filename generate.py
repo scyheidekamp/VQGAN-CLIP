@@ -44,10 +44,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-# Reduce the default image size if low VRAM
+# Image size
 default_image_size = 512
-if get_device_properties(0).total_memory <= 2 ** 33:  # 2 ** 33 = 8,589,934,592 bytes = 8 GB
-    default_image_size = 318
 
 # Create the parser
 vq_parser = argparse.ArgumentParser(description='Image generation using VQGAN+CLIP')
