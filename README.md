@@ -1,5 +1,7 @@
 # VQGAN-CLIP Overview
 
+This fork includes changes to be able to run this on CPU only.
+
 A repo for running VQGAN+CLIP locally. This started out as a Katherine Crowson VQGAN+CLIP derived Google colab notebook.
 
 Original notebook: [![Open In Colab][colab-badge]][colab-notebook]
@@ -31,7 +33,8 @@ conda create --name vqgan python=3.9
 conda activate vqgan
 
 pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
-# or pip install torch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+# or for mac pip install torch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+# or for linux pip install torch==1.9.0+cpu torchvision==0.10.0+cpu torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 pip install ftfy regex tqdm omegaconf pytorch-lightning IPython kornia imageio imageio-ffmpeg einops torch_optimizer
 
 git clone https://github.com/openai/CLIP
